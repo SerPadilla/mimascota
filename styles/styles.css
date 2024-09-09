@@ -1,0 +1,80 @@
+/* Aplicar margen de 5 px a toda la página */
+body {
+    margin: 5px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para el banner */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: purple; /* Color de fondo del banner */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Estilos para la imagen en el banner */
+.banner-left img {
+    width: 80px; /* Ajustar el tamaño de la imagen según sea necesario */
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50%; /* Opcional: para darle forma redonda a la imagen */
+}
+
+/* Ajustar el texto en el banner */
+.banner-left h1 {
+    font-size: 1.5em;
+    color: white; /* Color del texto */
+    margin: 0;
+}
+
+.banner-right {
+    color: white; /* Color del texto */
+}
+
+/* Estilo del botón */
+.button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Estilos para los cuadros de información */
+.info-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.info-box {
+    flex: 1;
+    min-width: 200px; /* Ajustar el ancho mínimo según sea necesario */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .banner-left img {
+        width: 60px; /* Tamaño reducido para dispositivos móviles */
+    }
+
+    .info-boxes {
+        flex-direction: column;
+    }
+}
