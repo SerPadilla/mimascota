@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Animal</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<header class="banner">
+    <div class="banner-left">
+        <div class="banner-img">
+            <img src="imagenes/pequeno-personaje-dibujos-animados-lindo-gato_1308-138075.avif" alt="Imagen animal" id="animal-image">
+        </div>
+    </div>
+    
+</header>
+<main class="content">
+    <h1>Datos de Alimentación del Gato</h1>
+    <form id="feeding-form">
+        <label for="breakfast-time">Hora de Desayuno:</label>
+        <input type="time" id="breakfast-time" name="breakfast-time" required><br><br>
+
+        <label for="lunch-time">Hora de Almuerzo:</label>
+        <input type="time" id="lunch-time" name="lunch-time" required><br><br>
+
+        <label for="dinner-time">Hora de Cena:</label>
+        <input type="time" id="dinner-time" name="dinner-time" required><br><br>
+
+        <label for="bathroom-frequency">Frecuencia de Necesidades:</label>
+        <input type="text" id="bathroom-frequency" name="bathroom-frequency" placeholder="E.g., Cada 4 horas" required><br><br>
+
+        <button type="submit">Guardar</button>
+    </form>
+</main>
+</body>
+</html>
