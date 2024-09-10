@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const name = localStorage.getItem('animalName') || 'Nombre del Animal';
-    const address = localStorage.getItem('userAddress') || 'Dirección: ';
-    const phone = localStorage.getItem('userPhone') || 'Celular: ';
+    const name = localStorage.getItem('animalName') || 'Mi nombre';
+    const address = localStorage.getItem('userAddress') || ' ';
+    const phone = localStorage.getItem('userPhone') || ' ';
     const imageUrl = localStorage.getItem('animalImage') || 'imagenes/pequeno-personaje-dibujos-animados-lindo-gato_1308-138075.avif';
 
     document.getElementById('animal-name').textContent = name;
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('animal-image').src = imageUrl;
 
     const loginBtn = document.getElementById('login-btn');
-    if (name === 'Nombre del Animal') {
+    if (name === 'Mi nombre') {
         loginBtn.textContent = 'Registrar';
         loginBtn.href = 'registro.html';
     } else {
