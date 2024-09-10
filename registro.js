@@ -17,6 +17,7 @@ document.getElementById('registro-form').addEventListener('submit', function(eve
     localStorage.setItem('animalName', name);
     localStorage.setItem('userAddress', address);
     localStorage.setItem('userPhone', phone);
+   
 
     window.location.href = 'index.html';
 });

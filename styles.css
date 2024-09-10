@@ -113,6 +113,36 @@ button {
     cursor: pointer;
 }
 
+/* cuadro*/
+.info-box {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Estilo específico para el cuadro de "Comida" */
+.info-box.comida {
+    background-color: rgb(236, 243, 240); /* Fondo morado */
+    border: 2px solid purple; /* Borde morado */
+    color: rgb(15, 14, 14); /* Color del texto */
+}
+
+/* Cambiar el color del fondo al pasar el ratón sobre el cuadro */
+.info-box:hover {
+    background-color: #e0e0e0; /* Fondo al pasar el ratón (para todos los cuadros) */
+}
+
+/* Estilo específico para el cuadro de "Comida" al pasar el ratón */
+.info-box.comida:hover {
+    background-color: #6a0dad; /* Fondo morado más oscuro al pasar el ratón */
+}
 
 
 
