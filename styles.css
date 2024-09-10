@@ -1,80 +1,118 @@
-/* Aplicar margen de 5 px a toda la página */
 body {
-    margin: 5px;
+    font-family: Arial, sans-serif;
+    background-color: #fffacd; /* Amarillo claro */
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Estilos generales para el banner */
 .banner {
+    background-color: #800080; /* Morado */
+    color: white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: purple; /* Color de fondo del banner */
     padding: 10px;
-    border-radius: 8px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
-/* Estilos para la imagen en el banner */
-.banner-left img {
-    width: 80px; /* Ajustar el tamaño de la imagen según sea necesario */
-    height: auto;
-    margin-right: 10px;
-    border-radius: 50%; /* Opcional: para darle forma redonda a la imagen */
+.banner-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
 }
 
-/* Ajustar el texto en el banner */
-.banner-left h1 {
-    font-size: 1.5em;
-    color: white; /* Color del texto */
-    margin: 0;
+.banner-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.banner-img h1 {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+#login-btn {
+    padding: 10px 20px;
+    background-color: #800080;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 .banner-right {
-    color: white; /* Color del texto */
-}
-
-/* Estilo del botón */
-.button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    cursor: pointer;
-    border-radius: 4px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-/* Estilos para los cuadros de información */
-.info-boxes {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+    padding-left: 20px;
+}
+
+.banner-right p {
+    margin: 5px 50px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 .info-box {
-    flex: 1;
-    min-width: 200px; /* Ajustar el ancho mínimo según sea necesario */
-    padding: 10px;
-    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 100px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f9f9f9;
 }
 
-/* Ajustes para dispositivos móviles */
-@media (max-width: 600px) {
-    .banner {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .banner-left img {
-        width: 60px; /* Tamaño reducido para dispositivos móviles */
-    }
-
-    .info-boxes {
-        flex-direction: column;
-    }
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #800080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+
+
+

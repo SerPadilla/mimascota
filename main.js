@@ -1,34 +1,34 @@
-// Verificar estado de autenticación y actualizar el botón
 document.addEventListener('DOMContentLoaded', () => {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    const authButton = document.getElementById('auth-button');
-    
-    if (isLoggedIn) {
-        authButton.textContent = 'Cerrar Sesión';
-        // Actualizar la información del banner
-        document.getElementById('cat-name').textContent = localStorage.getItem('catName') || 'Nombre del Gato';
-        document.getElementById('cat-address').textContent = `Dirección: ${localStorage.getItem('catAddress') || 'Calle Ejemplo 123'}`;
-        document.getElementById('cat-image').src = localStorage.getItem('catImage') || 'default-cat.gif';
+    const name = localStorage.getItem('animalName') || 'Nombre del Animal';
+    const address = localStorage.getItem('userAddress') || 'Dirección: ';
+    const phone = localStorage.getItem('userPhone') || 'Celular: ';
+    const imageUrl = localStorage.getItem('animalImage') || 'imagenes/pequeno-personaje-dibujos-animados-lindo-gato_1308-138075.avif';
+
+    document.getElementById('animal-name').textContent = name;
+    document.getElementById('user-address').textContent = `Dirección: ${address}`;
+    document.getElementById('user-phone').textContent = `Celular: ${phone}`;
+    document.getElementById('animal-image').src = imageUrl;
+
+    const loginBtn = document.getElementById('login-btn');
+    if (name === 'Nombre del Animal') {
+        loginBtn.textContent = 'Registrar';
+        loginBtn.href = 'registro.html';
     } else {
-        authButton.textContent = 'Registro / Inicio de Sesión';
+        loginBtn.textContent = 'Cerrar sesión';
+        loginBtn.href = 'index.html'; // Actualizamos la URL para que redirija al inicio
+
+        loginBtn.addEventListener('click', () => {
+            // Limpiar los datos de localStorage
+            localStorage.removeItem('animalName');
+            localStorage.removeItem('userAddress');
+            localStorage.removeItem('userPhone');
+            localStorage.removeItem('animalImage');
+
+            // Redirigir a la página principal
+            window.location.href = 'index.html';
+        });
     }
-
-    authButton.addEventListener('click', () => {
-        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-        if (isLoggedIn) {
-            // Cerrar sesión
-            localStorage.removeItem('isLoggedIn');
-            localStorage.removeItem('catName');
-            localStorage.removeItem('catAddress');
-            localStorage.removeItem('catImage');
-            location.reload();  // Recargar la página para actualizar el estado
-        } else {
-            location.href = 'registro.html';
-        }
-    });
 });
-
-
 
 
 
