@@ -36,17 +36,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Cuadro del index carga de información del datos de alimentación//
 
-document.addEventListener("DOMContentLoaded", function() {
-    const breakfastTime = localStorage.getItem('breakfastTime') || '--:--';
-    const lunchTime = localStorage.getItem('lunchTime') || '--:--';
-    const dinnerTime = localStorage.getItem('dinnerTime') || '--:--';
+document.getElementById('feeding-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Evita que el formulario se envíe normalmente
 
-    // Mostrar los horarios en el cuadro de comida
-    document.getElementById('breakfast-time-display').textContent = breakfastTime;
-    document.getElementById('lunch-time-display').textContent = lunchTime;
-    document.getElementById('dinner-time-display').textContent = dinnerTime;
+    // Captura los datos del formulario
+    const breakfastTime = document.getElementById('breakfast-time').value;
+    const lunchTime = document.getElementById('lunch-time').value;
+    const dinnerTime = document.getElementById('dinner-time').value;
+    const bathroomFrequency = document.getElementById('bathroom-frequency').value;
 
-    
+    // Guarda los datos en localStorage
+    localStorage.setItem('breakfastTime', breakfastTime);
+    localStorage.setItem('lunchTime', lunchTime);
+    localStorage.setItem('dinnerTime', dinnerTime);
+    localStorage.setItem('bathroomFrequency', bathroomFrequency);
+
+    // Redirige a index.html
+    window.location.href = 'index.html';
 });
-
 
