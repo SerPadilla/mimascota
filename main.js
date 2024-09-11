@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('breakfast-time-display').textContent = breakfastTime;
     document.getElementById('lunch-time-display').textContent = lunchTime;
     document.getElementById('dinner-time-display').textContent = dinnerTime;
+
+    
 });
 
 
