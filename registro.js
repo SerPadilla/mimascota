@@ -2,6 +2,7 @@ document.getElementById('registro-form').addEventListener('submit', function(eve
     event.preventDefault();
 
     const name = document.getElementById('name').value;
+    const due = document.getElementById('due').value;
     const address = document.getElementById('address').value;
     const phone = document.getElementById('phone').value;
     const photo = document.getElementById('photo').files[0];
@@ -15,6 +16,7 @@ document.getElementById('registro-form').addEventListener('submit', function(eve
     }
 
     localStorage.setItem('animalName', name);
+    localStorage.setItem('userDue', due);
     localStorage.setItem('userAddress', address);
     localStorage.setItem('userPhone', phone);
    

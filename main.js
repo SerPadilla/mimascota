@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = localStorage.getItem('animalName') || 'Mi nombre';
     const address = localStorage.getItem('userAddress') || ' ';
     const phone = localStorage.getItem('userPhone') || ' ';
+    const due = localStorage.getItem('userDue') || ' ';
     const imageUrl = localStorage.getItem('animalImage') || 'imagenes/pequeno-personaje-dibujos-animados-lindo-gato_1308-138075.avif';
 
     document.getElementById('animal-name').textContent = name;
     document.getElementById('user-address').textContent = `Dirección: ${address}`;
+    document.getElementById('user-due').textContent = `Mi Dueña: ${due}`;
     document.getElementById('user-phone').textContent = `Celular: ${phone}`;
     document.getElementById('animal-image').src = imageUrl;
 
@@ -20,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loginBtn.addEventListener('click', () => {
             // Limpiar los datos de localStorage
             localStorage.removeItem('animalName');
+            localStorage.removeItem('userDue');
             localStorage.removeItem('userAddress');
             localStorage.removeItem('userPhone');
             localStorage.removeItem('animalImage');
