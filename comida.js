@@ -16,3 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Datos guardados exitosamente');
     });
 });
+
+// Cuadro del index carga de información del datos de alimentación//
+
+
+const breakfastTime = localStorage.getItem('breakfastTime') || '--:--';
+const lunchTime = localStorage.getItem('lunchTime') || '--:--';
+const dinnerTime = localStorage.getItem('dinnerTime') || '--:--';
+const bathroomFrequency = localStorage.getItem('bathroomFrequency') || 'N/A';
+
+// Mostrar los horarios en el cuadro
+document.getElementById('mini-breakfast-time').textContent = breakfastTime;
+document.getElementById('mini-lunch-time').textContent = lunchTime;
+document.getElementById('mini-dinner-time').textContent = dinnerTime;
+document.getElementById('mini-bathroom-frequency').textContent = bathroomFrequency;

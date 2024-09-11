@@ -3,6 +3,7 @@ body {
     background-color: #fffacd; /* Amarillo claro */
     margin: 0;
     padding: 0;
+    
 }
 
 .banner {
@@ -119,14 +120,22 @@ button {
     min-width: 200px;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 1px;
     background-color: #f9f9f9;
     text-align: left;
     text-decoration: none;
     color: black;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.5s, border-color 0.3s;
            
 }
+.right-align {
+    
+    text-align: right; /* Alinea el texto a la derecha */
+    overflow: hidden;
+    
+}
+
+
 
 /* Estilo específico para el cuadro de "Comida" */
 .info-box {

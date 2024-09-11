@@ -34,5 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Cuadro del index carga de información del datos de alimentación//
+
+document.addEventListener("DOMContentLoaded", function() {
+    const breakfastTime = localStorage.getItem('breakfastTime') || '--:--';
+    const lunchTime = localStorage.getItem('lunchTime') || '--:--';
+    const dinnerTime = localStorage.getItem('dinnerTime') || '--:--';
+
+    // Mostrar los horarios en el cuadro de comida
+    document.getElementById('breakfast-time-display').textContent = breakfastTime;
+    document.getElementById('lunch-time-display').textContent = lunchTime;
+    document.getElementById('dinner-time-display').textContent = dinnerTime;
+});
 
 
