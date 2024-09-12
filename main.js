@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const address = localStorage.getItem('userAddress') || ' ';
     const phone = localStorage.getItem('userPhone') || ' ';
     const due = localStorage.getItem('userDue') || ' ';
-    const imageUrl = localStorage.getItem('animalImage') || 'imagenes/pequeno-personaje-dibujos-animados-lindo-gato_1308-138075.avif';
+    const imageUrl = localStorage.getItem('animalImage') || 'imagenes/gato sin fondo.png';
 
     document.getElementById('animal-name').textContent = name;
     document.getElementById('user-address').textContent = `Dirección: ${address}`;

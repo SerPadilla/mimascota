@@ -116,36 +116,47 @@ button {
 /* cuadro*/
 
 .info-box {
-    flex: 1;
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
     min-width: 200px;
+    max-width: 100%; /* Limita el ancho máximo al contenedor */
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 1px;
-    background-color: #f9f9f9;
-    text-align: left;
+    border: 6px solid #9e01a3ee;
+    border-radius: 20px;
+    background-color: #fffb00;
     text-decoration: none;
     color: black;
     transition: background-color 0.5s, border-color 0.3s;
-           
-}
-.right-align {
-    
-    text-align: right; /* Alinea el texto a la derecha */
+    box-sizing: border-box;
     overflow: hidden;
-    
+}
+
+.info-box img {
+    width: 80px; /* Ajusta el tamaño de la imagen si es necesario */
+    height: auto;
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+    flex-shrink: 0;
+}
+
+.text-content {
+    flex-grow: 1; /* Ocupa el espacio disponible a la derecha de la imagen */
+    text-align: center; /* Centra el título horizontalmente */
+}
+
+.text-content p {
+    margin: 5px 0; /* Añade un pequeño margen entre los párrafos */
+}
+
+.text-content .info-horario {
+    font-weight: bold; /* Hace que el título sea más destacado */
+    margin-bottom: 10px; /* Añade espacio entre el título y el resto del contenido */
 }
 
 
 
-/* Estilo específico para el cuadro de "Comida" */
-.info-box {
-    background-color: rgb(223, 221, 108); /* Fondo cuadro */
-    border: 3px solid purple; /* Borde morado */
-    color: rgb(15, 14, 14); /* Color del texto */
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5), 0 18px 24px rgba(0, 0, 0, 0.1);
-    
-   
-}
+
+
+
 
 /* Cambiar el color del fondo al pasar el ratón sobre el cuadro */
 .info-box:hover {
@@ -153,8 +164,7 @@ button {
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2), 0 18px 24px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada para un efecto "flotante" */
     transform: translateY(-2px);
     
-  
-    
+   
 }
 
 /* Estilo específico para el cuadro de "Comida" al pasar el ratón */
