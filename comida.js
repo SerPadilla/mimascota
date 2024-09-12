@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('dinnerTime', dinnerTime);
         localStorage.setItem('bathroomFrequency', bathroomFrequency);
 
-        alert('Datos guardados exitosamente');
+        
     });
 });
 
